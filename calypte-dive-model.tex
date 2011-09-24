@@ -1,0 +1,247 @@
+\documentclass{rspublic}
+
+
+% I typically use these
+\usepackage{graphicx}
+%\usepackage{color}
+%\usepackage{makeidx}
+\usepackage{siunitx}
+
+% PDF metadata
+% not compatible with rsauthor!!!
+%\usepackage{hyperref}
+%\hypersetup{pdftitle={Aerodynamics of display dives in Anna's Hummingbirds}}
+%\hypersetup{pdfauthor={Dennis J. Evangelista and Christopher J. Clark}}
+%\hypersetup{pdfsubject={biomechanics}}
+%\hypersetup{pdfkeywords={biomechanics, Anna's hummingbird, \emph{Calypte anna}, dive, display}}
+
+% Biology style references
+\usepackage[round]{natbib}
+\setcitestyle{authoryear, round, comma, aysep={;}, yysep={,}, notesep={, }}
+\bibliographystyle{rspublicnat}
+
+% Figures at end for draft
+%\usepackage[lists,tablesfirst]{endfloat}
+
+% Genus and species names
+\newcommand{\Calypteanna}{\emph{Calypte anna}}
+\newcommand{\Canna}{\emph{C.\:anna}}
+\newcommand{\Archaeopteryx}{\emph{Archaeopteryx}}
+\newcommand{\Microraptor}{\emph{Microraptor}}
+\newcommand{\Draco}{\emph{Draco}}
+\newcommand{\aoa}{angle of attack}
+
+
+
+
+
+% Title block information
+\begin{document}
+\title[Anna's Hummingbird dive aerodynamics]{Aerodynamics of display dives in Anna's Hummingbirds (\Calypteanna)}
+\author[D. Evangelista, C. Clark and R. Dudley]{Dennis Evangelista, Christopher Clark, and Robert Dudley}
+\affiliation{University of California, Berkeley, Berkeley, CA, USA}
+\date{\today}
+\label{firstpage}
+\maketitle
+
+
+\begin{abstract}{biomechanics, aerodynamics, stability, maneuvering, empennage, display, Calypte anna, hummingbird, model}
+This paper describes wind tunnel tests of models of \Calypteanna\ and computer simulations of their longitudinal plane dynamics during a display dive.  The paper fits with my thesis in two ways.  First, it validates the method of using physical models to predict gliding performance in a real glider with performance that has actually been measured.  Second, it allows computation of control authority of movements of the wings (protraction and retraction) and the tail (spreading, raising and lowering) as well as effects on stability of the removal of appendages (tail and wing).  Preliminary results of this work suggest the tail is a large contributor to lift during an ecologically- and selectively-relevant maneuver (male display dives); this is different from ``traditional'' based notions of how rudders and tail surfaces work in airplanes and boats and how previous authors have considered the function of tails in organisms such as \Archaeopteryx.  The data will allow comparison with other shapes such as \Draco\ lizards, \Microraptor, and fossil feathered theropods in the transition between \Archaeopteryx\ and modern birds.   This paper is notionally targeted at Proc R Soc Lond B. 
+\end{abstract}
+
+
+
+%\jname{Proc.\ R.\ Soc.\ B}
+%\jdoi{doi:10.1098/rspb}
+
+\section{Introduction}
+This section needs to be written.  \Canna\ males perform display dives described in \citep{Hamilton:1965,Stiles:1982}.   More recently, it has been established that sounds associated with the dive, specifically element $C_{dive}$, a tonal \emph{squeak}\ consisting of \SI{4}{\kilo\hertz}\ and higher harmonics, are produced by a flag-type spanwise fluttering of the fifth (most distal) tail feather \citep{Clark:2008}. Analysis of the dive kinematics shows speeds of up to \SI{27}{\meter\per\second}\ are reached, and that the dive pullout requires accelerations up to $\num{9}\ g$ \citep{Clark:2009}.  Sexual selection suggested... signal honest if somehow constrained by the biomechanics... Clark says courtship provides opportunity to study extreme performance but rules out circulatory physiological effects of high $g$; perhaps pectoralis maximum force.  
+
+Does not consider aerodynamic things like stability... proportion of force generation by wings versus tail... So lets look at that? 
+
+\section{Methods and materials}
+\subsection{Models and test conditions}
+Scale models of \Calypteanna\ were constructed from photographs and examination of preserved \Canna\ specimens in the University of California Museum of Vertebrate Zoology.  Models were built on an aluminum plate with polymer clay (Polyform Products Co., Elk Grove, IL) to fill out the body.  Wings were constructed using paper and paper surgical tape (3M, St.\ Paul, MN) over steel wire bent to match the shape of the bones in the wing.  The wing surface was stiffened by addition of monofilament line at the locations of the individual feather rachises.  Using methods similar to the wings, two tails were constructed to examine the effect of a spread versus shut tail.  The wings and tail were removable to allow modeling of the bounding phase of the dive and to examine the relative contributions of each to the overall aerodynamics.  In addition, to provide a comparison to a simple shape without any three-dimensional anatomical details, a \SI{3}{\milli\meter} flat acrylic plate with the same planform as the other models was used.  
+
+For \aoa\ runs, at least five replicates were conducted at \ang{5} angle increments from \SIrange{-15}{30}{\degree} \aoa.  Runs were conducted between \SIrange{8}{12}{\meter\per\second}, corresponding to the average and peak Reynolds number observed during dives \citep{Clark:2009}.  Some runs were also conducted with \ang{1} \aoa\ increments to further examine the shape of the curve.  In addition, speed runs were also conducted at \ang{0} \aoa and speeds from \SIrange{0}{12}{\meter\per\second} to assess the impact of Reynolds number.
+
+\subsection{Force measurements and flow visualization}
+Models were mounted on a six-axis force transducer (ATI Industrial Automation, Apex, NC), which was in turn mounted on a \SI{1/2}{inch} (\SI{0.127}{\meter}) aluminum rod exiting the model laterally and about two diameters away from the right wing.  Wind tunnel tests were conducted in an open-circuit Eiffel-type wind tunnel with an \SI{18 x 18 x 36}{inch} (\SI{45.7 x 45.7 x 91.4}{\centi\meter}) working section (Engineering Laboratory Design, Lake City, MN).  
+
+Force transducer readings were recorded at \SI{1000}{\hertz} sampling frequency using a National Instruments 6251 data acquisition card (National Instruments, Austin, TX).  Raw measurements were rotated from a frame fixed to the model to one aligned with the wind tunnel and flow using the angle-of-attack.  Transformed measurements were then averaged over a one-minute recording.  For each measurement, wind tunnel speed $v$ was recorded and used to compute Reynolds number ($\mbox{Re} = vL/\nu$).  Lift $L$, drag $D$, and pitching moment $M_p$ were normalized to obtain nondimensional lift, drag, and pitching moment coefficients according to the following: 
+\begin{equation}
+C_L = \frac{L}{1/2 \rho v^2 A_p}
+\end{equation}
+\begin{equation}
+C_D = \frac{D}{1/2 \rho v^2 A_p}
+\end{equation}
+\begin{equation}
+C_m = \frac{M_p}{1/2 \rho v^2 A_p \lambda_{SVL}}
+\end{equation}
+where $\rho=\SI{1.204}{\kg\per\meter\cubed}$ is the air density, $A_p$ is the model planform area, and $\lambda_{SVL}$ is the snout-vent length of the model. 
+
+Particle imaging velocimetry (PIV), in which paired images of particles suspended in the flow are used to obtain two-dimensional flow fields, was used to visualize flow into the tail near the tip.  The flow was seeded using an olive oil mist created by a pressurized oil container equipped with a perforated tube atomizer (LaVision, G\"ottingen, Germany).  Models were illuminated in the sagittal plane using a vertical \SI{532}{\nano\meter} wavelength laser sheet generated by a double-pulsed Nd:YAG laser (New Wave Research model 25185, Fremont, CA) equipped with a \ang{20}\ sheet optic.  The sheet was filmed with a LaVision ImagerPro X2M camera and a Nikon \SI{50}{\milli\meter}\ f/1.8 lens to obtain paired images at \SI{15}{pairs\per\second}.  To obtain velocity fields, images were post-processed in DaVis (LaVision, Goettingen, Germany) with multiple passes up to \num{64 x 64}\ pixel windows at \SI{75}{\percent}\ overlap.
+
+\subsection{Additional analysis}
+Introduce Koehl metrics here. Statistical analyses were performed in R \citep{R:2011}.
+
+\subsection{Simulations}
+Simulations will be conducted in Python.  Fill in the details here. Consider coordinates fixed to the bird and notation as in \citep{McCormick:1995, Anderson:2007}.  $x$ is the anterior-posterior axis, $y$ is lateral-medial, and $z$ is dorsal ventral and they move with the bird. $U$ and $W$ are the anterior-posterior and dorso-ventral velocities and $Q$ is the angular velocity (pitching rate).  Newton's second law for this case is given by
+\begin{equation}
+\Sigma X = m (\dot{U} + Q W)
+\end{equation}
+\begin{equation}
+\Sigma Z = m (\dot{W} - Q U)
+\end{equation}
+\begin{equation}
+\Sigma M = J \dot{Q}
+\end{equation}
+where the $QW$ and $QU$ terms are the coriolis accelerations, $\Sigma X$ is the sum of anterior-posterior forces, $\Sigma Z$ is the sum of dorso-ventral forces, and $\Sigma M$ is sum of pitching moments.  The body-fixed coordinates can be transformed back to stationary-frame coordinates:
+\begin{equation}
+\dot{x_f} = U \cos\theta + W \sin\theta
+\end{equation}
+\begin{equation}
+\dot{z_f} = U \sin\theta - W \cos\theta
+\end{equation}
+\begin{equation}
+\dot{\theta_f} = Q
+\end{equation}
+This formulation is useful but is singular at $\theta = \pi/2$, which means the model here cannot be used for a straight-down parachuting case.  The speed through still air is given by:
+\begin{equation}
+\hat V = \sqrt{U^2 + W^2}
+\end{equation}
+The angle of attack is given by:
+\begin{equation}
+\alpha = -\arctan{\frac{W}{U}}
+\end{equation}
+
+The forces are given by:
+\begin{equation}
+\Sigma X = \frac{1}{2}\rho\hat{V}^2 S (C_L \sin\alpha - C_D \cos\alpha) - m g \sin\theta
+\end{equation}
+\begin{equation}
+\Sigma Z = \frac{1}{2}\rho\hat{V}^2 S (-C_L \cos\alpha - C_D \sin\alpha) + m g \cos\theta
+\end{equation}
+\begin{equation}
+\Sigma M = \frac{1}{2}\rho\hat{V}^2 S\lambda C_M 
+\end{equation}
+where force coefficients $C_L$, $C_D$, and $C_M$ must be evaluated the particular angle of attack $\alpha$ and posture. These might be right???
+
+\section{Results}
+Fill in. 
+
+%\begin{figure}
+%\includegraphics{plots/Cl_v_aoa.pdf}
+%\caption{Lift coefficient versus angle of attack showing a bare body (grey, lower trace), wings only (grey, upper trace), shut tail (blue) and spread tail (red).  Filled symbols represent tests conducted at a speed corresponding to the average Re.  Open symbols represent tests conducted at maximum Re.}
+%\label{fig:Cl_v_aoa}
+%\end{figure}
+%
+%\begin{figure}
+%\includegraphics{plots/Cd_v_aoa.pdf}
+%\caption{Drag coefficient versus angle of attack.  Same symbols as in Fig.~\ref{fig:Cl_v_aoa}.}
+%\label{fig:Cd_v_aoa}
+%\end{figure}
+%
+%\begin{figure}
+%\includegraphics{plots/Cm_v_aoa.pdf}
+%\caption{Pitching moment coefficient versus angle of attack. Same symbols as in Fig.~\ref{fig:Cl_v_aoa}.}
+%\end{figure}
+%
+%\begin{figure}
+%\includegraphics{plots/LD_v_aoa.pdf}
+%\caption{Lift-to-drag ratio versus angle of attack. Same symbols as in Fig.~\ref{fig:Cl_v_aoa}.  The spread tail increases $L/D$.  95th percentile are 4ish and 6ish.}
+%\end{figure}
+%
+%
+%\begin{figure}
+%\includegraphics{plots/Cl_v_Cd.pdf}
+%\caption{Lift drag polar. Same symbols as in Fig.~\ref{fig:Cl_v_aoa}.}
+%\end{figure}
+%
+%\begin{figure}
+%\includegraphics{plots/SpreadCl_v_aoa.pdf}
+%\caption{Lift coefficient versus angle of attack for spread tails at \ang{+10}, \ang{0}, \ang{-10}, and \ang{-30}.}
+%\end{figure}
+%
+%\begin{figure}
+%\includegraphics{plots/SpreadCd_v_aoa.pdf}
+%\caption{Drag coefficient versus angle of attack for spread tails at \ang{+10}, \ang{0}, \ang{-10}, and \ang{-30}.}
+%\end{figure}
+%
+%\begin{figure}
+%\includegraphics{plots/SpreadCm_v_aoa.pdf}
+%\caption{Pitching moment coefficient versus angle of attack for spread tails at \ang{+10}, \ang{0}, \ang{-10}, and \ang{-30}.}
+%\end{figure}
+%
+%
+%\begin{figure}
+%\includegraphics{plots/UnspreadWinglessCl_v_aoa.pdf}
+%\caption{Lift coefficient versus angle of attack for unspread tails at \ang{+10}, \ang{0}, \ang{-10}, and \ang{-30} with wings tucked.}
+%\end{figure}
+%
+%\begin{figure}
+%\includegraphics{plots/UnspreadWinglessCd_v_aoa.pdf}
+%\caption{Drag coefficient versus angle of attack for unspread tails at \ang{+10}, \ang{0}, \ang{-10}, and \ang{-30} with wings tucked}
+%\end{figure}
+%
+%\begin{figure}
+%\includegraphics{plots/UnspreadWinglessCm_v_aoa.pdf}
+%\caption{Pitching moment coefficient versus angle of attack for unspread tails at \ang{+10}, \ang{0}, \ang{-10}, and \ang{-30} with wings tucked.}
+%\end{figure}
+%
+%
+%\begin{figure}
+%\includegraphics{plots/UnspreadCl_v_aoa.pdf}
+%\caption{Lift coefficient versus angle of attack for unspread tails at \ang{+10}, \ang{0}, \ang{-10}.}
+%\end{figure}
+%
+%\begin{figure}
+%\includegraphics{plots/UnspreadCd_v_aoa.pdf}
+%\caption{Drag coefficient versus angle of attack for spread tails at \ang{+10}, \ang{0}, \ang{-10}.}
+%\end{figure}
+%
+%\begin{figure}
+%\includegraphics{plots/UnspreadCm_v_aoa.pdf}
+%\caption{Pitching moment coefficient versus angle of attack for spread tails at \ang{+10}, \ang{0}, \ang{-10}.}
+%\end{figure}
+%
+%
+%\begin{figure}
+%\includegraphics{plots/SpreadWinglessCl_v_aoa.pdf}
+%\caption{Lift coefficient versus angle of attack for a spread tails \ang{0} with wings tucked.}
+%\end{figure}
+%
+%\begin{figure}
+%\includegraphics{plots/SpreadWinglessCd_v_aoa.pdf}
+%\caption{Drag coefficient versus angle of attack for a spread tails \ang{0} with wings tucked.}
+%\end{figure}
+%
+%\begin{figure}
+%\includegraphics{plots/SpreadWinglessCm_v_aoa.pdf}
+%\caption{Pitching moment coefficient versus angle of attack for a spread tails \ang{0} angle with wings tucked.}
+%\end{figure}
+%
+%\begin{figure}
+%\includegraphics{plots/Cm_v_aoa_protraction.pdf}
+%\caption{Pitching moment coefficient versus angle of attack as wings are swept back.}
+%\end{figure}
+%
+%\begin{figure}
+%\includegraphics{plots/coeffs_v_Re.pdf}
+%\caption{Coefficients do not depend on Reynolds number in this regime.}
+%\end{figure}
+%The pencil versions of these figures have the cartoons, asymptotic lines, and notes drawn in.  These need to be added in the production version of the figures. 
+
+\section{Discussion}
+\subsection{Simulation matches real measured trajectories = method is good?}
+\subsection{Stability and control authority}
+\subsection{How tails really work in this maneuver is different than how Dial and Padian assume}
+\subsection{Comparison with other available data and implications for evolution of maneuvering...}
+
+\begin{acknowledgements}
+We thank Robert Dudley for use of the wind tunnel and PIV equipment.  In addition, we thank Felicia Linn, Louise Qu, Yonatan Munk, Aaron Hoover, Kevin Peterson, and the Koehl and Fearing Labs at UC Berkeley for assistance in construction of models, and Tom Libby and the Berkeley Center for Integrative Biomechanics in Education and Research (CIBER) for use of the force sensor.
+\end{acknowledgements}
+
+\bibliography{ottodive}
+\label{lastpage}
+\end{document}
