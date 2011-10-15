@@ -1,9 +1,18 @@
 \documentclass{rspublic}
 
+% For revision control
+\usepackage{rcs-multi}
+\rcsid{$Id$}
+\rcsid{$Header$}
+\rcskwsave{$Author$}
+\rcskwsave{$Date$} 
+\rcskwsave{$Revision$}
+%%\rcsRegisterAuthor{devangel}{Dennis Jos{\'e} Evangelista}
+\rcsRegisterAuthor{devangel}{Dennis J. Evangelista}
 
 % I typically use these
 \usepackage{graphicx}
-%\usepackage{color}
+%\usepackage[usenames,dvipsnames]{color}
 %\usepackage{makeidx}
 \usepackage{siunitx}
 
@@ -14,6 +23,7 @@
 %\hypersetup{pdfauthor={Dennis J. Evangelista and Christopher J. Clark}}
 %\hypersetup{pdfsubject={biomechanics}}
 %\hypersetup{pdfkeywords={biomechanics, Anna's hummingbird, \emph{Calypte anna}, dive, display}}
+%\hypersetup{colorlinks=true,citecolor=Violet,linkcolor=Blue,urlcolor=Red}
 
 % Biology style references
 \usepackage[round]{natbib}
@@ -131,103 +141,103 @@ where force coefficients $C_L$, $C_D$, and $C_M$ must be evaluated the particula
 Fill in. 
 
 %\begin{figure}
-%\includegraphics{plots/Cl_v_aoa.pdf}
+%\includegraphics{figures/Cl_v_aoa.pdf}
 %\caption{Lift coefficient versus angle of attack showing a bare body (grey, lower trace), wings only (grey, upper trace), shut tail (blue) and spread tail (red).  Filled symbols represent tests conducted at a speed corresponding to the average Re.  Open symbols represent tests conducted at maximum Re.}
 %\label{fig:Cl_v_aoa}
 %\end{figure}
 %
 %\begin{figure}
-%\includegraphics{plots/Cd_v_aoa.pdf}
+%\includegraphics{figures/Cd_v_aoa.pdf}
 %\caption{Drag coefficient versus angle of attack.  Same symbols as in Fig.~\ref{fig:Cl_v_aoa}.}
 %\label{fig:Cd_v_aoa}
 %\end{figure}
 %
 %\begin{figure}
-%\includegraphics{plots/Cm_v_aoa.pdf}
+%\includegraphics{figures/Cm_v_aoa.pdf}
 %\caption{Pitching moment coefficient versus angle of attack. Same symbols as in Fig.~\ref{fig:Cl_v_aoa}.}
 %\end{figure}
 %
 %\begin{figure}
-%\includegraphics{plots/LD_v_aoa.pdf}
+%\includegraphics{figures/LD_v_aoa.pdf}
 %\caption{Lift-to-drag ratio versus angle of attack. Same symbols as in Fig.~\ref{fig:Cl_v_aoa}.  The spread tail increases $L/D$.  95th percentile are 4ish and 6ish.}
 %\end{figure}
 %
 %
 %\begin{figure}
-%\includegraphics{plots/Cl_v_Cd.pdf}
+%\includegraphics{figures/Cl_v_Cd.pdf}
 %\caption{Lift drag polar. Same symbols as in Fig.~\ref{fig:Cl_v_aoa}.}
 %\end{figure}
 %
 %\begin{figure}
-%\includegraphics{plots/SpreadCl_v_aoa.pdf}
+%\includegraphics{figures/SpreadCl_v_aoa.pdf}
 %\caption{Lift coefficient versus angle of attack for spread tails at \ang{+10}, \ang{0}, \ang{-10}, and \ang{-30}.}
 %\end{figure}
 %
 %\begin{figure}
-%\includegraphics{plots/SpreadCd_v_aoa.pdf}
+%\includegraphics{figures/SpreadCd_v_aoa.pdf}
 %\caption{Drag coefficient versus angle of attack for spread tails at \ang{+10}, \ang{0}, \ang{-10}, and \ang{-30}.}
 %\end{figure}
 %
 %\begin{figure}
-%\includegraphics{plots/SpreadCm_v_aoa.pdf}
+%\includegraphics{figures/SpreadCm_v_aoa.pdf}
 %\caption{Pitching moment coefficient versus angle of attack for spread tails at \ang{+10}, \ang{0}, \ang{-10}, and \ang{-30}.}
 %\end{figure}
 %
 %
 %\begin{figure}
-%\includegraphics{plots/UnspreadWinglessCl_v_aoa.pdf}
+%\includegraphics{figures/UnspreadWinglessCl_v_aoa.pdf}
 %\caption{Lift coefficient versus angle of attack for unspread tails at \ang{+10}, \ang{0}, \ang{-10}, and \ang{-30} with wings tucked.}
 %\end{figure}
 %
 %\begin{figure}
-%\includegraphics{plots/UnspreadWinglessCd_v_aoa.pdf}
+%\includegraphics{figures/UnspreadWinglessCd_v_aoa.pdf}
 %\caption{Drag coefficient versus angle of attack for unspread tails at \ang{+10}, \ang{0}, \ang{-10}, and \ang{-30} with wings tucked}
 %\end{figure}
 %
 %\begin{figure}
-%\includegraphics{plots/UnspreadWinglessCm_v_aoa.pdf}
+%\includegraphics{figures/UnspreadWinglessCm_v_aoa.pdf}
 %\caption{Pitching moment coefficient versus angle of attack for unspread tails at \ang{+10}, \ang{0}, \ang{-10}, and \ang{-30} with wings tucked.}
 %\end{figure}
 %
 %
 %\begin{figure}
-%\includegraphics{plots/UnspreadCl_v_aoa.pdf}
+%\includegraphics{figures/UnspreadCl_v_aoa.pdf}
 %\caption{Lift coefficient versus angle of attack for unspread tails at \ang{+10}, \ang{0}, \ang{-10}.}
 %\end{figure}
 %
 %\begin{figure}
-%\includegraphics{plots/UnspreadCd_v_aoa.pdf}
+%\includegraphics{figures/UnspreadCd_v_aoa.pdf}
 %\caption{Drag coefficient versus angle of attack for spread tails at \ang{+10}, \ang{0}, \ang{-10}.}
 %\end{figure}
 %
 %\begin{figure}
-%\includegraphics{plots/UnspreadCm_v_aoa.pdf}
+%\includegraphics{figures/UnspreadCm_v_aoa.pdf}
 %\caption{Pitching moment coefficient versus angle of attack for spread tails at \ang{+10}, \ang{0}, \ang{-10}.}
 %\end{figure}
 %
 %
 %\begin{figure}
-%\includegraphics{plots/SpreadWinglessCl_v_aoa.pdf}
+%\includegraphics{figures/SpreadWinglessCl_v_aoa.pdf}
 %\caption{Lift coefficient versus angle of attack for a spread tails \ang{0} with wings tucked.}
 %\end{figure}
 %
 %\begin{figure}
-%\includegraphics{plots/SpreadWinglessCd_v_aoa.pdf}
+%\includegraphics{figures/SpreadWinglessCd_v_aoa.pdf}
 %\caption{Drag coefficient versus angle of attack for a spread tails \ang{0} with wings tucked.}
 %\end{figure}
 %
 %\begin{figure}
-%\includegraphics{plots/SpreadWinglessCm_v_aoa.pdf}
+%\includegraphics{figures/SpreadWinglessCm_v_aoa.pdf}
 %\caption{Pitching moment coefficient versus angle of attack for a spread tails \ang{0} angle with wings tucked.}
 %\end{figure}
 %
 %\begin{figure}
-%\includegraphics{plots/Cm_v_aoa_protraction.pdf}
+%\includegraphics{figures/Cm_v_aoa_protraction.pdf}
 %\caption{Pitching moment coefficient versus angle of attack as wings are swept back.}
 %\end{figure}
 %
 %\begin{figure}
-%\includegraphics{plots/coeffs_v_Re.pdf}
+%\includegraphics{figures/coeffs_v_Re.pdf}
 %\caption{Coefficients do not depend on Reynolds number in this regime.}
 %\end{figure}
 %The pencil versions of these figures have the cartoons, asymptotic lines, and notes drawn in.  These need to be added in the production version of the figures. 
@@ -242,6 +252,6 @@ Fill in.
 We thank Robert Dudley for use of the wind tunnel and PIV equipment.  In addition, we thank Felicia Linn, Louise Qu, Yonatan Munk, Aaron Hoover, Kevin Peterson, and the Koehl and Fearing Labs at UC Berkeley for assistance in construction of models, and Tom Libby and the Berkeley Center for Integrative Biomechanics in Education and Research (CIBER) for use of the force sensor.
 \end{acknowledgements}
 
-\bibliography{ottodive}
+\bibliography{references/ottodive}
 \label{lastpage}
 \end{document}
