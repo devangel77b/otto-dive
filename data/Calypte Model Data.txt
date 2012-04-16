@@ -1,0 +1,4 @@
+model	nares.to.tail	l.wing	r.wing	perimeter	area
+C.anna	0.06543	0.05038	0.04587	NA	0.0026053719
+Unspread	0.1458	0.1196	0.1212	0.8968	0.01261
+Spread	0.1494	0.1195	0.1180	1.100	0.01447
